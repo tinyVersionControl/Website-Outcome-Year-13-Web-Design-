@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: white;
+}
+
+nav{
+    position: relative;
+
+    display: flex;
+    height: 3rem;
+    justify-content: space-between;
+
+    
+    background-color: rgb(3, 3, 3);
+
+    font-size: large;
+    font-family: "Poppins", sans-serif;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav li{
+    display: flex;
+}
+
+nav ul li a{
+    position: relative;
+
+    height: 100%;
+    line-height: 3rem;
+
+    display: block;
+    padding: 0 0.5rem;
+
+    color: white;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+nav ul li a::after{
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 0.175rem;
+
+    content: '';
+
+    background-color: white;
+
+    transform: scale(0, 1);
+    transform-origin: 0% 100%;
+    transition: transform 0.5s ease;
+}
+
+nav ul li a:hover::after{
+    transform: scale(1, 1);
+}
+
+main{
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 65vh;
+    
+    background-color: rgb(3, 3, 3);
+
+    color: white;
+}
+
+.main-hero h1{
+    margin: 0 0 5vh 0;
+
+    font-size: 4rem;
+    font-family: 'Poppins', sans-serif;
+
+    transition: 0.4s;
+}
+
+.main-hero-options{
+    display: flex;
+
+    line-height: 10vh;
+
+    width: 25vw;
+    height: 10vh;
+    
+    border-radius: 50px;
+    background-color: rgb(9, 11, 32);
+
+    justify-content: space-between;
+
+    transition: 0.3s;
+}
+
+.main-hero-options:hover{
+    transform: scale(1.025) rotate(-1deg);
+}
+
+.main-hero-options form input{
+    width: 7vw;
+    height:  8vh;
+
+    margin: 0 0.5vw 0 0.5vw;
+
+    font-size: 1.25rem;
+    font-weight: bold;
+
+    color: white;
+    background-color: rgb(29, 19, 88);
+
+    border-radius: 50px;
+    border: none;
+
+    cursor: pointer;
+}
+
+.main-content{
+    display: flex;
+
+    width: 100%;
+    height: 50vh;
+
+    justify-content: space-between;
+}
+
+.lesson-box{
+    height: 15vh;
+
+    background-color: black;
+}
