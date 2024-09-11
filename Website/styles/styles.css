@@ -16,7 +16,6 @@ nav{
     display: flex;
     height: 3rem;
     justify-content: space-between;
-
     
     background-color: rgb(3, 3, 3);
 
@@ -106,46 +105,276 @@ main{
     height: 10vh;
     
     border-radius: 50px;
-    background-color: rgb(9, 11, 32);
+
+    background-image: linear-gradient(to right, rgb(255, 165, 46), rgb(255, 37, 175));
 
     justify-content: space-between;
 
     transition: 0.3s;
 }
 
-.main-hero-options:hover{
-    transform: scale(1.025) rotate(-1deg);
-}
-
 .main-hero-options form input{
     width: 7vw;
     height:  8vh;
 
-    margin: 0 0.5vw 0 0.5vw;
+    margin: 1vh 0.5vw 0 0.5vw;
 
     font-size: 1.25rem;
     font-weight: bold;
 
-    color: white;
-    background-color: rgb(29, 19, 88);
+    color: black;
+    background-color: rgb(252, 252, 252);
 
     border-radius: 50px;
     border: none;
 
     cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.main-hero-options form input:hover{
+    transform: scale(1.025);
+
+    color: rgb(252, 252, 252);
+    background-color: rgb(0, 0, 0);
 }
 
 .main-content{
     display: flex;
 
     width: 100%;
-    height: 50vh;
+    height: 75vh;
 
     justify-content: space-between;
 }
 
 .lesson-box{
-    height: 15vh;
+    position: relative;
 
-    background-color: black;
+    margin: 5vh auto;
+
+    height: 65vh;
+    width: 30vw;
+
+    color: white;
+    background-color: rgb(22, 22, 22);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+    
+    transition: 0.3s;
+}
+
+.lesson-box:hover{
+    transform: scale(1.025);
+}
+
+.lesson-box::before{
+    position: absolute;
+    
+    content: '';
+
+    width: 100%;
+    height: 0.75rem;
+
+    top: 0;
+    left: 0;
+
+    background-image: var(--lesson-gradient);
+}
+
+#gradient-purple-blue{
+    --lesson-gradient: linear-gradient(to right, rgb(110, 52, 218), rgb(78, 156, 234));
+}
+
+#gradient-orange-pink{
+    --lesson-gradient: linear-gradient(to right, rgb(251, 137, 30), rgb(255, 50, 238));
+}
+
+#gradient-blue-green{
+    --lesson-gradient: linear-gradient(to right, rgb(64, 166, 255), rgb(109, 255, 135));
+}
+
+.lesson-box-title{
+    display: flex;
+    
+    width: 100%;
+    height: 40vh;
+
+    color: rgb(255, 255, 255);
+
+    background-position: center;
+    background-size: cover;
+
+    margin: 0 auto;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.lesson-box-title h1{
+    margin: 10vh auto;
+    
+    font-size: 2.5rem;
+}
+
+#html{
+    background-image: url(../images/htmlImage.png);
+}
+
+#lua{
+    background-image: url(../images/luaImage.jpg);
+}
+
+#python{
+    background-image: url(../images//pythonImage.jpg);
+}
+
+.lesson-box-content{
+    display: flex;
+}
+
+.lesson-box-content form{
+    margin: 5vh auto;
+}
+
+.lesson-box-content form input{
+    width: 12.5vw;
+    height: 10vh;
+
+    color: white;
+    background-color: rgb(70, 74, 206);
+
+    font-size: 1.75rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+
+    border-radius: 50px;
+    border: none;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.lesson-box-content form input:hover{
+    background-color: rgb(34, 39, 172);
+    transform: scale(1.025);
+}
+
+/* -- Sign Up Page -- */
+
+.signup-main{
+    height: 105vh;
+    width: 100%;
+}
+
+.signup{
+    position: relative;
+
+    overflow: hidden;
+
+    margin: 5vh auto;
+
+    width: 40vw;
+    height: 100vh;
+
+    color: white;    
+    background-color: rgb(30, 28, 33);
+
+    border-radius: 30px;
+}
+
+#SignupForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#SignupForm h1{
+    margin: 5vh;
+
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.textBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    outline: none;
+
+    margin: 5vh;
+}
+
+.textBox label{
+    font-size: 1.25rem;
+    font-weight: bold;
+
+    margin-bottom: 2.5vh;
+}
+
+.textBox input{
+    height: 4vh;
+    width: 17.5vw;
+
+    border: none;    
+    border-bottom: solid 2px rgb(255, 255, 255);
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.textBox input:focus{
+    outline: none;
+}
+
+.button input{
+    margin: 5vh;
+
+    width: 10vw;
+    height: 7.5vh;
+
+    border: none;
+    border-radius: 50px;
+
+    font-size: 1.25rem;
+    font-family: 'Roboto', sans-serif;
+
+    color: white;
+    background-color: rgb(120, 153, 255);
+}
+
+.textBox input::placeholder{
+    color: white;
+}
+
+.signup::after{
+    position: absolute;
+
+    content: '';
+
+    left: 0;
+    top: 0;
+    
+    height: 1.25rem;
+    width: 100%;
+
+    background-image: linear-gradient(to right, rgb(255, 132, 0), rgb(255, 77, 228));
+}
+
+.signup::before{
+    position: absolute;
+
+    content: '';
+
+    left: 0;
+    bottom: 0;
+    
+    height: 1.25rem;
+    width: 100%;
+
+    background-image: linear-gradient(to right, rgb(106, 178, 255), rgb(123, 255, 108));
 }
