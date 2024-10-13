@@ -96,7 +96,7 @@ main{
     transition: 0.4s;
 }
 
-.main-hero-options{
+.main-hero-nav{
     display: flex;
 
     line-height: 10vh;
@@ -113,7 +113,7 @@ main{
     transition: 0.3s;
 }
 
-.main-hero-options form input{
+.main-hero-nav form input{
     width: 7vw;
     height:  8vh;
 
@@ -133,7 +133,7 @@ main{
     transition: 0.3s;
 }
 
-.main-hero-options form input:hover{
+.main-hero-nav form input:hover{
     transform: scale(1.025);
 
     color: rgb(252, 252, 252);
@@ -280,10 +280,10 @@ main{
     width: 40vw;
     height: 100vh;
 
-    color: white;    
-    background-color: rgb(30, 28, 33);
+    color: rgb(0, 0, 0);    
+    background-color: rgb(252, 252, 252);
 
-    border-radius: 30px;
+    box-shadow: 0px 0px 10px inset rgb(90, 90, 90);
 }
 
 #SignupForm{
@@ -307,7 +307,14 @@ main{
     outline: none;
 
     margin: 5vh;
+
+    transition: 0.3s;
 }
+
+.textBox:hover{
+    transform: scale(1.025);
+}
+
 
 .textBox label{
     font-size: 1.25rem;
@@ -321,14 +328,18 @@ main{
     width: 17.5vw;
 
     border: none;    
-    border-bottom: solid 2px rgb(255, 255, 255);
+    border-bottom: solid 2px rgb(0, 0, 0);
 
-    color: white;
+    color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0);
 }
 
 .textBox input:focus{
     outline: none;
+}
+
+.textBox input::placeholder{
+    color: rgb(0, 0, 0);
 }
 
 .button input{
@@ -341,40 +352,50 @@ main{
     border-radius: 50px;
 
     font-size: 1.25rem;
+    font-weight: bolder;
     font-family: 'Roboto', sans-serif;
 
-    color: white;
-    background-color: rgb(120, 153, 255);
+    color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+
+    border: solid 2px rgb(0, 0, 0);
+
+    cursor: pointer;
+
+    transition: 0.3s;
 }
 
-.textBox input::placeholder{
-    color: white;
-}
+.button input:hover{
+    transform: scale(1.05);
 
-.signup::after{
-    position: absolute;
-
-    content: '';
-
-    left: 0;
-    top: 0;
-    
-    height: 1.25rem;
-    width: 100%;
-
-    background-image: linear-gradient(to right, rgb(255, 132, 0), rgb(255, 77, 228));
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
 }
 
 .signup::before{
-    position: absolute;
-
     content: '';
 
-    left: 0;
-    bottom: 0;
-    
-    height: 1.25rem;
-    width: 100%;
+    position: absolute;
 
-    background-image: linear-gradient(to right, rgb(106, 178, 255), rgb(123, 255, 108));
+    top: 0;
+    left: 0;
+
+    width: inherit;
+    height: 1.5vh;
+
+    background-image: linear-gradient(to right, rgb(110, 52, 218), rgb(78, 156, 234));
+}
+
+.signup::after{
+    content: '';
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: inherit;
+    height: 1.5vh;
+
+    background-image: linear-gradient(to right, rgb(251, 137, 30), rgb(255, 50, 238));
 }
