@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Connect with the stylesheet-->
+    <link rel="stylesheet" href="../styles/styles.css">
+    <!--Title of the page-->
+    <title>Main</title>
+</head>
+<body>
+
+    <!--Navigation Bar-->
+    <nav>
+        <!--Using a blank space for styling since I'm using justify-content: space-between-->
+        &nbsp;
+        <!--Nav bar items are in an unordered list-->
+        <ul>
+            <!--Navigation bar links-->
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/about.html">About</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+            <li><a href="../pages/signup.html">Sign In</a></li>
+        </ul>
+        <!--Using a blank space for styling since I'm using justify-content: space-between-->
+        &nbsp;
+    </nav>
+
+    <!--Main section of the main page-->
+    <main>
+        <!--Hero Section-->
+        <div class="main-hero">
+            <!--Website Name-->
+            <h1>Eclipse Code</h1>
+
+            <!--Little navigation bar that is in the middle of th page-->
+            <div class="main-hero-nav">
+                <!--Each link is a button-->
+
+                <!--Link One-->
+                <form action="../pages/signup.html">
+                    <input type="submit" value="Sign In">
+                </form>
+                <!--Link Two-->
+                <form action="../pages/courses.html">
+                    <input type="submit" value="Courses">
+                </form>
+                <!--Link Three-->
+                <form action="../pages/about.html">
+                    <input type="submit" value="About">
+                </form>
+            </div>
+        </div>
+
+        <!--Start the main content of the page-->
+        <div class="main-content">
+            <!--Box that shows a lesson--> <!--using id to change a small gradient for styling of this specific box-->
+            <div class="lesson-box" id="gradient-purple-blue">
+
+                <!--Using another div for the title just to keep spacing right also giving it an ID for a background image-->
+                <div class="lesson-box-title" id="html">
+
+                    <!--Lessons Title-->
+                    <h1>HTML Courses</h1>
+                </div>
+
+                <!--Div to seperate from the div above-->
+                <div class="lesson-box-content">
+
+                    <!--Link button to the lesson-->
+                    <form action="../pages/lessons/htmllesson.html">
+                        <input type="submit" value="Join">
+                    </form>
+                </div>
+            </div>
+            <!--Box that shows a lesson--> <!--using id to change a small gradient for styling of this specific box-->
+            <div class="lesson-box" id="gradient-orange-pink">
+                <div class="lesson-box-title" id="lua">
+                    <h1>Lua Courses</h1>
+                </div>
+                <div class="lesson-box-content">
+                    <form action="../#">
+                        <input type="submit" value="Join">
+                    </form>
+                </div>
+            </div>
+            <div class="lesson-box" id="gradient-blue-green">
+                <div class="lesson-box-title" id="python">
+                    <h1>Python Courses</h1>
+                </div>
+                <div class="lesson-box-content">
+                    <form action="../#">
+                        <input type="submit" value="Join">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
